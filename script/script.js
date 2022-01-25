@@ -38,7 +38,15 @@ while (remainingLetters > 0) {
     } else {
         //Update the game state with the guess
         for (let j=0; j < word.length; j++) {
-            if(word[j] === guess)
+            if(word[j] === guess) {
+                answerArray[j] = guess;
+                remainingLetters--;
+
+            }
         }
     }
+//The end of the Game loop
 }
+//Show the answer and congratulate the player
+alert(answerArray.join(" "));
+alert("Good Job! The answer was " + word);
